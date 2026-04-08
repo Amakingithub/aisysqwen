@@ -1,0 +1,127 @@
+# ========================================
+# Qwen & AutoClaw Backup - .gitignore
+# ========================================
+
+# Sensitive credentials
+oauth_creds.json
+oauth*.json
+*.key
+*.pem
+.env
+.env.*
+secrets/
+credentials/
+
+# API keys and tokens
+*api_key*
+*secret*
+*token*
+
+# Browser extension caches
+autoclaw-chrome-*.crx
+autoclaw-edge-*.crx
+*.crx
+
+# Downloaded installers
+*.exe
+*.dmg
+*.deb
+*.msi
+
+# Log files (except recent)
+logs/*.log
+!logs/backup-history.md
+*.log.*
+
+# Cache and temp files
+*.cache
+cache/
+tmp/
+temp/
+*.tmp
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+.vscode/
+.idea/
+
+# Node modules (if any)
+node_modules/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env/
+.venv/
+venv/
+
+# Build outputs
+dist/
+build/
+out/
+
+# Package manager locks (keep package.json but not locks)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Windows specific
+$RECYCLE.BIN/
+System Volume Information/
+
+# Qwen specific - exclude these
+.qwen/debug/
+.qwen/tmp/
+.qwen/projects/c--users-hpm/
+.qwen/projects/c--windows-system32/
+
+# OpenClaw specific - exclude these
+.openclaw-autoclaw/logs/*.log
+.openclaw-autoclaw/request-headers.json
+.openclaw-autoclaw/update-check.json
+
+# Large files (>50MB should use Git LFS)
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation downloads
+*.pdf
+*.docx
+*.pptx
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Jupyter notebooks (can be large)
+*.ipynb
+
+# Images (can be large, use sparingly)
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+!*.md
