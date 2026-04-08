@@ -1,0 +1,58 @@
+{
+  "agents": {
+    "defaults": {
+      "workspace": "C:\\Users\\HPM/.openclaw-autoclaw/workspace",
+      "heartbeat": {
+        "every": "4h"
+      },
+      "compaction": {
+        "reserveTokensFloor": 40000
+      },
+      "model": {
+        "primary": "zai/zai_glm-5-turbo"
+      }
+    }
+  },
+  "tools": {
+    "fs": {
+      "workspaceOnly": true
+    },
+    "web": {
+      "search": {
+        "enabled": false
+      }
+    }
+  },
+  "models": {
+    "providers": {
+      "zai": {
+        "baseUrl": "https://autoglm-api.autoglm.ai/autoclaw-proxy/proxy/autoclaw",
+        "apiKey": "${AUTOCRAW_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "zai_glm-5-turbo",
+            "name": "GLM-5-Turbo",
+            "headers": {
+              "X-Request-Model": "zai_glm-5-turbo",
+              "X-Authorization": "${AUTOCRAW_BEARER_TOKEN}",
+              "X-Tm": "win",
+              "X-Version": "0.2.20",
+              "X-Product": "autoclaw",
+              "X-Channel": "official",
+              "X-Lang": "en"
+            }
+          }
+        ],
+        "headers": {
+          "x_trace_id": "autoclaw-desktop"
+        }
+      }
+    }
+  },
+  "skills": {
+    "allowBundled": [
+      "__none__"
+    ]
+  }
+}

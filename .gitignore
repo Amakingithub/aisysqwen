@@ -93,10 +93,14 @@ System Volume Information/
 .qwen/projects/c--users-hpm/
 .qwen/projects/c--windows-system32/
 
-# OpenClaw specific - exclude these
+# OpenClaw specific - exclude files with real credentials
 .openclaw-autoclaw/logs/*.log
 .openclaw-autoclaw/request-headers.json
 .openclaw-autoclaw/update-check.json
+.openclaw-autoclaw/openclaw.json
+.openclaw-autoclaw/openclaw.json.known-good
+.openclaw-autoclaw/workspace/.openclaw/workspace-state.json
+!*.json.sanitized
 
 # Large files (>50MB should use Git LFS)
 *.zip
@@ -125,3 +129,8 @@ System Volume Information/
 *.bmp
 *.tiff
 !*.md
+
+# Local credentials - NEVER COMMIT
+.env.local
+*.local
+!*.template
